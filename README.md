@@ -154,3 +154,6 @@ Thank you for all CS50.
 
 - Where I get CS50 course?
 https://cs50.harvard.edu/x/2023/
+
+---
+website link: [4 in 1 Generator](https://rudraa19.github.io/4-in-1-generator-cs50/index.html)
