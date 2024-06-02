@@ -6,7 +6,6 @@
 }
 
 .her {
-    /* background: linear-gradient(45deg, #010758, #490d61); */
     display: block;
     width: 100%;
     margin-top: 0;
@@ -23,6 +22,7 @@
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    text-align: center;
 }
 
 .hero h1 {
@@ -62,10 +62,13 @@ span {
     color: #ff2963;
 }
 
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
 nav ul li {
     list-style-type: none;
-    display: inline-block;
-    padding: 10px 20px;
 }
 
 nav ul li a {
@@ -96,7 +99,8 @@ button:hover {
 }
 
 textarea {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 250px;
     background: #403d84;
     color: #fff;
@@ -114,10 +118,12 @@ textarea::placeholder {
 }
 
 .row {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 #listen {
@@ -159,4 +165,78 @@ select::after {
 ::-webkit-scrollbar-thumb {
     background: #ff2963;
     border-radius: 3px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 40px;
+        margin-top: -30%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        margin-top: -25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+        margin-top: -20%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 25px;
+        margin-top: -15%;
+    }
+
+    nav {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #listen {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    select {
+        height: 40px;
+        padding: 0 15px;
+    }
 }
