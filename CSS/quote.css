@@ -46,6 +46,11 @@ span {
     color: #ff2963;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -78,7 +83,6 @@ button {
 button:hover {
     transform: scale(1.1);
 }
-
 
 .quote-box {
     color: #fff;
@@ -178,4 +182,102 @@ select::after {
 ::-webkit-scrollbar-thumb {
     background: #ff2963;
     border-radius: 3px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .quote-box {
+        width: 80%;
+        padding: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .quote-box h2 {
+        font-size: 28px;
+    }
+
+    .quote-box blockquote {
+        font-size: 22px;
+    }
+
+    .quote-box button {
+        width: 130px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .quote-box h2 {
+        font-size: 24px;
+    }
+
+    .quote-box blockquote {
+        font-size: 20px;
+    }
+
+    .quote-box button {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    nav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        padding: 5px 0;
+    }
 }
